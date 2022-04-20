@@ -28,7 +28,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url('../images/xer.jpg');
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.6)), url(../images/hero.jpeg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -85,7 +85,7 @@ header .header-content .header-content-inner p {
         margin-right: auto;
         margin-left: auto;
         max-width: 80%;
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
@@ -165,7 +165,10 @@ header .header-content .header-content-inner p {
 
 .page-footer {
 	text-align: center;
-	}
+    color: #fff;
+    background-color: #222;
+    padding: 4rem 0;
+}
 
 .page-footer .contact {
 	padding: 100px 0;
@@ -185,7 +188,7 @@ header .header-content .header-content-inner p {
 	}
 		
 .page-footer .small-print {
-	padding: 50px 0 40px;
+	padding-top: 3rem;
 	font-weight: 300;
 	}
 
