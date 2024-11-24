@@ -5,9 +5,9 @@
   "type": "module",
   "homepage": "https://abhyudayelectricals.github.io/abhyudayelectricals.github.io",
   "scripts": {
-  "build": "vite build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",
