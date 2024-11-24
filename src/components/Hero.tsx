@@ -17,7 +17,7 @@ export default function Hero() {
         className="absolute top-0 left-0 min-h-full min-w-full object-cover"
       >
         <source
-          src="https://static.videezy.com/system/resources/previews/000/021/352/original/P1033095.mp4"
+          src="/media/dpc_wire.mp4"
           type="video/mp4"
         />
       </video>

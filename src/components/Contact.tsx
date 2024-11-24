@@ -59,33 +59,50 @@ export default function Contact() {
 
           {/* Contact Information */}
           <div className="bg-gray-900 rounded-lg shadow-xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <MapPin className="h-6 w-6 text-blue-500 mr-4" />
-                <div>
-                  <h4 className="font-semibold">Address</h4>
-                  <p className="text-gray-300">
-                    Abhyuday Electricals Pvt. Ltd.
-                    <br />
-                    Industrial Area
-                    <br />
-                    Your City, State, India
-                  </p>
+            <div className="flex flex-col md:flex-row justify-between">
+              <div className="space-y-6 md:w-1/2">
+                <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+                <div className="flex items-start">
+                  <MapPin className="h-6 w-6 text-blue-500 mr-4" />
+                  <div>
+                    <h4 className="font-semibold">Address</h4>
+                    <p className="text-gray-300">
+                      Abhyuday Electricals Pvt. Ltd.
+                      <br />
+                      N-6, UPSIDC Industrial Area,
+                      <br />
+                      Kosi Kotwan, Uttar Pradesh 281403, India
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Phone className="h-6 w-6 text-blue-500 mr-4" />
+                  <div>
+                    <h4 className="font-semibold">Phone</h4>
+                    <p className="text-gray-300">+91 (98) 480-69384</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Mail className="h-6 w-6 text-blue-500 mr-4" />
+                  <div>
+                    <h4 className="font-semibold">Email</h4>
+                    <p className="text-gray-300">aps@abhyudayelectricals.com</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start">
-                <Phone className="h-6 w-6 text-blue-500 mr-4" />
-                <div>
-                  <h4 className="font-semibold">Phone</h4>
-                  <p className="text-gray-300">+91 (000) 000-0000</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <Mail className="h-6 w-6 text-blue-500 mr-4" />
-                <div>
-                  <h4 className="font-semibold">Email</h4>
-                  <p className="text-gray-300">info@abhyudayelectricals.com</p>
+
+              {/* Google Map */}
+              <div className="mt-6 md:mt-0 md:w-1/2 md:pl-4">
+                <div className="h-[150px] w-full rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3528.784785527996!2d77.41458597581115!3d27.8163946761202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39733b3f2c62330d%3A0xd69c5a728cfcb636!2sAbhyuday%20Electricals%20Pvt.%20Ltd.!5e0!3m2!1sen!2sde!4v1732488230743!5m2!1sen!2sde"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
               </div>
             </div>
