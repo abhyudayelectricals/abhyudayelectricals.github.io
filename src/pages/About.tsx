@@ -7,12 +7,10 @@ import Footer from '../components/Footer';
 export default function About() {
   return (
     <div className="min-h-screen">
-      <Navbar />
       <div className="pt-20">
         <AboutUs />
         <DirectorSection />
       </div>
-      <Footer />
     </div>
   );
 }

@@ -1,8 +1,31 @@
 import React from 'react';
 import { Factory } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleHomeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+  };
+
+  const handleSectionClick = (sectionId: string) => {
+    if (location.pathname !== '/') {
+      navigate('/', { replace: true });
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -24,24 +47,37 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-gray-400 hover:text-blue-500 transition-colors">
+                <button
+                  onClick={handleHomeClick}
+                  className="text-gray-400 hover:text-blue-500 transition-colors"
+                >
                   Home
-                </a>
+                </button>
               </li>
               <li>
-                <a href="/about" className="text-gray-400 hover:text-blue-500 transition-colors">
+                <Link 
+                  to="/about" 
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="text-gray-400 hover:text-blue-500 transition-colors"
+                >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#products" className="text-gray-400 hover:text-blue-500 transition-colors">
+                <button
+                  onClick={() => handleSectionClick('products')}
+                  className="text-gray-400 hover:text-blue-500 transition-colors"
+                >
                   Products
-                </a>
+                </button>
               </li>
               <li>
-                <a href="/#contact" className="text-gray-400 hover:text-blue-500 transition-colors">
+                <button
+                  onClick={() => handleSectionClick('contact')}
+                  className="text-gray-400 hover:text-blue-500 transition-colors"
+                >
                   Contact
-                </a>
+                </button>
               </li>
             </ul>
           </div>

@@ -1,7 +1,12 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 export default function Hero() {
+  const handleScroll = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="relative h-screen w-full overflow-hidden">
       {/* Video Background */}
@@ -30,13 +35,13 @@ export default function Hero() {
         <p className="text-xl md:text-2xl text-center max-w-2xl mb-8">
           Leading electrical manufacturing solutions with innovation and precision
         </p>
-        <a
-          href="#products"
+        <button
+          onClick={() => handleScroll('products')}
           className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full 
           transition-colors duration-300 text-lg font-semibold"
         >
           Explore Our Solutions
-        </a>
+        </button>
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 animate-bounce">

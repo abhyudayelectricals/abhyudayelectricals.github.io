@@ -1,9 +1,36 @@
 import React from 'react';
 import { Factory, Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  const handleHomeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+  };
+
+  const handleSectionClick = (sectionId: string) => {
+    if (location.pathname !== '/') {
+      navigate('/', { replace: true });
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-sm">
@@ -17,18 +44,27 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="/" className="text-white hover:text-blue-500 transition-colors px-3 py-2 font-medium">
+              <button 
+                onClick={handleHomeClick}
+                className="text-white hover:text-blue-500 transition-colors px-3 py-2 font-medium"
+              >
                 Home
-              </a>
-              <a href="/about" className="text-white hover:text-blue-500 transition-colors px-3 py-2 font-medium">
+              </button>
+              <Link to="/about" className="text-white hover:text-blue-500 transition-colors px-3 py-2 font-medium">
                 About
-              </a>
-              <a href="/#products" className="text-white hover:text-blue-500 transition-colors px-3 py-2 font-medium">
+              </Link>
+              <button 
+                onClick={() => handleSectionClick('products')} 
+                className="text-white hover:text-blue-500 transition-colors px-3 py-2 font-medium"
+              >
                 Products
-              </a>
-              <a href="/#contact" className="text-white hover:text-blue-500 transition-colors px-3 py-2 font-medium">
+              </button>
+              <button 
+                onClick={() => handleSectionClick('contact')} 
+                className="text-white hover:text-blue-500 transition-colors px-3 py-2 font-medium"
+              >
                 Contact
-              </a>
+              </button>
             </div>
           </div>
 
@@ -48,30 +84,30 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90">
-            <a
-              href="/"
-              className="text-white hover:text-blue-500 block px-3 py-2 text-base font-medium"
+            <button
+              onClick={handleHomeClick}
+              className="text-white hover:text-blue-500 block px-3 py-2 text-base font-medium w-full text-left"
             >
               Home
-            </a>
-            <a
-              href="/about"
+            </button>
+            <Link
+              to="/about"
               className="text-white hover:text-blue-500 block px-3 py-2 text-base font-medium"
             >
               About
-            </a>
-            <a
-              href="/#products"
-              className="text-white hover:text-blue-500 block px-3 py-2 text-base font-medium"
+            </Link>
+            <button
+              onClick={() => handleSectionClick('products')}
+              className="text-white hover:text-blue-500 block px-3 py-2 text-base font-medium w-full text-left"
             >
               Products
-            </a>
-            <a
-              href="/#contact"
-              className="text-white hover:text-blue-500 block px-3 py-2 text-base font-medium"
+            </button>
+            <button
+              onClick={() => handleSectionClick('contact')}
+              className="text-white hover:text-blue-500 block px-3 py-2 text-base font-medium w-full text-left"
             >
               Contact
-            </a>
+            </button>
           </div>
         </div>
       )}
