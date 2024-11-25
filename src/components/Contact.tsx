@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission
+  };
+
   return (
     <section id="contact" className="py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +26,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-xl p-8">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                   Name
@@ -26,6 +35,8 @@ export default function Contact() {
                   type="text"
                   id="name"
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div>
@@ -36,6 +47,8 @@ export default function Contact() {
                   type="email"
                   id="email"
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div>
@@ -46,6 +59,8 @@ export default function Contact() {
                   id="message"
                   rows={4}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
               <button
@@ -69,7 +84,7 @@ export default function Contact() {
                     <p className="text-gray-300">
                       Abhyuday Electricals Pvt. Ltd.
                       <br />
-                      N-6, UPSIDC Industrial Area,
+                      N-6, UPSIDC Industrial Area
                       <br />
                       Kosi Kotwan, Uttar Pradesh 281403, India
                     </p>
@@ -86,7 +101,9 @@ export default function Contact() {
                   <Mail className="h-6 w-6 text-blue-500 mr-4" />
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-gray-300">aps@abhyudayelectricals.com</p>
+                    <p className="text-gray-300">
+                      <a href={`mailto:${'aps@abhyudayelectricals.com'}`}>{'aps'}@{'abhyudayelectricals.com'}</a>
+                    </p>
                   </div>
                 </div>
               </div>

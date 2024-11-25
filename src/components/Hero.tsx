@@ -33,7 +33,7 @@ export default function Hero() {
           <span className="text-blue-500">With Excellence</span>
         </h1>
         <p className="text-xl md:text-2xl text-center max-w-2xl mb-8">
-          Leading electrical manufacturing solutions with innovation and precision
+        Leading Manufacturer of Premium DPC Wires with Quality and Precision
         </p>
         <button
           onClick={() => handleScroll('products')}

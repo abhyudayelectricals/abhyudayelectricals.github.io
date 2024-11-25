@@ -87,13 +87,13 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <address className="text-gray-400 not-italic">
               Abhyuday Electricals Pvt. Ltd.<br />
-              Industrial Area<br />
-              Your City, State, India<br /><br />
-              <a href="tel:+910000000000" className="hover:text-blue-500">
-                +91 (000) 000-0000
+              N-6, UPSIDC Industrial Area<br />
+              Kosi Kotwan, Uttar Pradesh 281403, India<br /><br />
+              <a href="tel:+919848069384" className="hover:text-blue-500">
+              +91 (98) 480-69384
               </a><br />
-              <a href="mailto:info@abhyudayelectricals.com" className="hover:text-blue-500">
-                info@abhyudayelectricals.com
+              <a href={`mailto:${'aps@abhyudayelectricals.com'}`} className="hover:text-blue-500">
+                {`aps@abhyudayelectricals.com`}
               </a>
             </address>
           </div>

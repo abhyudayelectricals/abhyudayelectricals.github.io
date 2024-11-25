@@ -6,6 +6,7 @@ import Products from './components/Products';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import About from './pages/About';
+import WhatsAppButton from './components/WhatsAppButton';
 
 // Create a Home component to hold your main page content
 const Home = () => (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

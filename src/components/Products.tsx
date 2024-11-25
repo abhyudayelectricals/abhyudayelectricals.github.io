@@ -1,36 +1,19 @@
 import React from 'react';
-import { Shield, Cpu, Cog, Battery, Wrench, Gauge } from 'lucide-react';
 
 const products = [
   {
-    icon: Cpu,
-    title: 'Precision Machinery',
-    description: 'State-of-the-art CNC machines and robotics systems for maximum accuracy',
+    image: '/media/dpc_al_1.jpeg',
+    title: 'DPC Aluminum Wire',
+    description: 'Double Paper Covered Aluminum Wire, '
+    + 'is a type of insulated wire used for electrical applications, '
+    + 'particularly in transformer winding',
   },
   {
-    icon: Cog,
-    title: 'Industrial Equipment',
-    description: 'Heavy-duty manufacturing equipment built for reliability and performance',
-  },
-  {
-    icon: Battery,
-    title: 'Power Systems',
-    description: 'Advanced power solutions for industrial applications',
-  },
-  {
-    icon: Shield,
-    title: 'Safety Systems',
-    description: 'Comprehensive safety solutions for manufacturing environments',
-  },
-  {
-    icon: Wrench,
-    title: 'Maintenance Tools',
-    description: 'Professional-grade tools for industrial maintenance',
-  },
-  {
-    icon: Gauge,
-    title: 'Control Systems',
-    description: 'Smart control systems for automated manufacturing processes',
+    image: '/media/dpc_al_1.jpeg',
+    title: 'DPC Copper Wire',
+    description: 'Double Paper Covered copper wire, is a'
+    + ' type of copper wire that is widely used in various '
+    + 'electrical and industrial applications.',
   },
 ];
 
@@ -47,13 +30,13 @@ export default function Products() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {products.map((product, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-lg p-6 transform hover:scale-105 transition-transform duration-300"
+              className="bg-gray-800 rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 relative"
             >
-              <product.icon className="h-12 w-12 text-blue-500 mb-4" />
+              <img src={product.image} alt={product.title} className="h-48 w-full object-cover rounded-lg mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">{product.title}</h3>
               <p className="text-gray-400">{product.description}</p>
             </div>
