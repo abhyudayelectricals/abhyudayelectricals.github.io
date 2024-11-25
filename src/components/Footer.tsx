@@ -1,6 +1,7 @@
 import React from 'react';
 import { Factory } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import logo from '/media/logo.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,8 +35,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <Factory className="h-8 w-8 text-blue-500" />
-              <span className="ml-2 text-xl font-bold">Abhyuday Electricals</span>
+            <img src={logo} alt="Logo" className="h-8 w-8" />
+              <span className="ml-2 text-xl font-bold">Abhyuday Electricals Pvt. Ltd.</span>
             </div>
             <p className="text-gray-400">
               Powering India's Future with Excellence
