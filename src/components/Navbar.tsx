@@ -1,7 +1,8 @@
 import React from 'react';
-import { Factory, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import logo from '/media/logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +38,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <Factory className="h-8 w-8 text-blue-500" />
+            <img src={logo} alt="Logo" className="h-8 w-8" />
             <span className="ml-2 text-xl font-bold text-white">Abhyuday Electricals</span>
           </div>
           

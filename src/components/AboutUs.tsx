@@ -66,7 +66,8 @@ export default function AboutUs() {
         </div>
 
         {/* Our Clients Section */}
-        <div>
+        {/* Removed the entire section */}
+        {/* <div>
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Our Trusted Clients</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {clients.map((client, index) => (
@@ -86,7 +87,7 @@ export default function AboutUs() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
