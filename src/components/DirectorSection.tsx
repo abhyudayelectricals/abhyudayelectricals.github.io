@@ -44,35 +44,6 @@ export default function DirectorSection() {
               </div>
             </div>
           </div>
-
-          {/* Second Director */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Director's Image */}
-            <div className="relative">
-              <img
-                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                alt="Director"
-                className="rounded-lg shadow-2xl w-full max-w-md mx-auto"
-              />
-              <div className="absolute inset-0 bg-blue-500 rounded-lg -z-10 transform translate-x-4 translate-y-4"></div>
-            </div>
-
-            {/* Director's Information */}
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-2">Vijay Pratap Singh</h3>
-                <p className="text-xl text-blue-600 mb-6">Director</p>
-              </div>
-
-              <div className="space-y-4 text-gray-600">
-                <p>
-                  Vijay Pratap Singh brings over 20 years of expertise in operations and strategic planning
-                  to Abhyuday Electricals. His innovative approach has been crucial in modernizing our
-                  manufacturing processes.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
