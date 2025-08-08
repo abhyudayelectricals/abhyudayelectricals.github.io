@@ -1,19 +1,22 @@
-import React from 'react';
 
 const products = [
   {
     image: '/media/dpc_al_1.jpeg',
     title: 'DPC Aluminum Wire',
-    description: 'Double Paper Covered Aluminum Wire, '
-    + 'is a type of insulated wire used for electrical applications, '
-    + 'particularly in transformer winding',
+    description: 'High-quality Aluminium Double Paper Covered (DPC) Wires '
+    + 'specifically designed for transformer winding applications. Premium grade '
+    + 'DPC wire for industrial transformers, home transformers, and electrical equipment manufacturing.',
+    alt: 'High-quality transformer Double Paper Covered (DPC) wire manufacturing - Abhyuday Electricals',
+    keywords: 'transformer DPC wire, Double Paper Covered wire, transformer winding wire'
   },
   {
     image: '/media/dpc_al_1.jpeg',
-    title: 'DPC Copper Wire',
-    description: 'Double Paper Covered copper wire, is a'
-    + ' type of copper wire that is widely used in various '
-    + 'electrical and industrial applications.',
+    title: 'DPC Strips',
+    description: 'Durable DPC strips designed for electrical insulation and '
+    + 'transformer applications. Quality Double Paper Covered strips suitable '
+    + 'for transformer manufacturers and electrical equipment production.',
+    alt: 'Premium DPC strips for transformer and electrical applications - Abhyuday Electricals',
+    keywords: 'DPC strips, electrical insulation strips, transformer strips'
   },
 ];
 
@@ -32,14 +35,19 @@ export default function Products() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {products.map((product, index) => (
-            <div
+            <article
               key={index}
-              className="bg-gray-800 rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 relative"
+              className="bg-gray-800 rounded-lg p-6 transform hover:scale-105 transition-transform duration-300"
             >
-              <img src={product.image} alt={product.title} className="h-48 w-full object-cover rounded-lg mb-4" />
+              <img 
+                src={product.image} 
+                alt={product.alt}
+                className="h-48 w-full object-cover rounded-lg mb-4"
+                loading="lazy"
+              />
               <h3 className="text-xl font-semibold text-white mb-2">{product.title}</h3>
               <p className="text-gray-400">{product.description}</p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

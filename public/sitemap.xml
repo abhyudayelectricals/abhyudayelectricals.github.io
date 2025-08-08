@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://abhyudayelectricals.com/</loc>
+    <lastmod>2025-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://abhyudayelectricals.com/media/AEPL_vectorized_logo.svg</image:loc>
+      <image:title>Abhyuday Electricals Logo</image:title>
+      <image:caption>Leading Aluminium DPC wire manufacturer in India</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://abhyudayelectricals.com/media/dpc_al_1.jpeg</image:loc>
+      <image:title>Aluminium DPC Wire Manufacturing</image:title>
+      <image:caption>High-quality Aluminium DPC wire and DPC strips production</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://abhyudayelectricals.com/media/machinery_1.jpeg</image:loc>
+      <image:title>DPC Wire Manufacturing Machinery</image:title>
+      <image:caption>State-of-the-art Aluminium DPC wire manufacturing equipment</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://abhyudayelectricals.com/about</loc>
+    <lastmod>2025-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://abhyudayelectricals.com/media/AEPL_AJAI.jpg</image:loc>
+      <image:title>Company Director</image:title>
+      <image:caption>Experienced leadership in electrical manufacturing</image:caption>
+    </image:image>
+  </url>
+  
+</urlset>

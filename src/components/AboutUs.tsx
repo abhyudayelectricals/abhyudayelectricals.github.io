@@ -34,9 +34,9 @@ export default function AboutUs() {
             About Abhyuday Electricals
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-            Since 2018, Abhyuday Electricals has been a leading manufacturer of premium double paper covering (DPC) 
-            aluminum wire in Uttar Pradesh, serving major transformer manufacturers across India with our 
-            commitment to excellence and quality manufacturing.
+            Since 2018, Abhyuday Electricals has been a leading manufacturer of premium Double Paper Covered (DPC) 
+            aluminium wire, specializing in transformer winding applications. We serve industrial transformer 
+            manufacturers across North India with our commitment to excellence and quality manufacturing.
           </p>
         </div>
 
@@ -47,19 +47,18 @@ export default function AboutUs() {
             <div className="space-y-4 text-gray-600">
               <p>
                 Established in 2018, Abhyuday Electricals has emerged as the premier manufacturer of 
-                double paper covering (DPC) aluminum wire in Uttar Pradesh, setting industry standards 
-                for quality and reliability.
+                Double Paper Covered (DPC) aluminium wire in Uttar Pradesh, specializing in high-quality 
+                transformer winding wire for industrial and home transformer applications.
               </p>
               <p>
-                Our state-of-the-art quality testing and control processes ensure that every product 
-                meets the highest standards of excellence. This unwavering commitment to quality has 
-                made us the preferred choice for major transformer manufacturers across India.
+                Our state-of-the-art quality testing and control processes ensure that every DPC wire 
+                meets the stringent requirements of transformer manufacturers. This unwavering commitment 
+                to quality has made us the preferred supplier for transformer companies across North India.
               </p>
               <p>
-                We take pride in serving clients from various regions including Uttar Pradesh, 
-                Madhya Pradesh, Rajasthan, and Maharashtra. As we continue to grow, we're 
-                constantly expanding our client base while maintaining our core values of 
-                quality and excellence in manufacturing.
+                We proudly serve transformer manufacturers across Uttar Pradesh, Rajasthan, Madhya Pradesh, 
+                Haryana, and Delhi. Our strategic location enables efficient distribution to industrial 
+                hubs while maintaining our core values of quality excellence in transformer wire manufacturing.
               </p>
             </div>
           </div>
