@@ -1,6 +1,12 @@
 import React from 'react';
 
 export default function DirectorSection() {
+  // Calculate years of experience since 1990, rounded to nearest 5 years
+  const startYear = 1990;
+  const currentYear = new Date().getFullYear();
+  const actualYears = currentYear - startYear;
+  const yearsOfExperience = Math.round(actualYears / 5) * 5;
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,6 +23,9 @@ export default function DirectorSection() {
                 src="/media/AEPL_AJAI.jpg"
                 alt="Director"
                 className="rounded-lg shadow-2xl w-full max-w-md mx-auto"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable={false}
+                style={{ userSelect: 'none', pointerEvents: 'auto' }}
               />
               <div className="absolute inset-0 bg-blue-500 rounded-lg -z-10 transform translate-x-4 translate-y-4"></div>
             </div>
@@ -30,7 +39,7 @@ export default function DirectorSection() {
 
               <div className="space-y-4 text-gray-600">
                 <p>
-                With over 35 years of expertise in the wire manufacturing industry, Ajai Pal Singh has 
+                With over {yearsOfExperience} years of expertise in the wire manufacturing industry, Ajai Pal Singh has 
                 been instrumental in establishing Abhyuday Electricals as a leading manufacturer of premium DPC wires. 
                 His vast experience spans the production of Enamelled Copper Wire, Enamelled Aluminium Wire, Copper Wire, 
                 Winding Wire, Wire Lamination, and Polyester, making him a seasoned expert in the field.
@@ -38,7 +47,7 @@ export default function DirectorSection() {
                 <p>
                 Under his visionary leadership, Abhyuday Electricals continues to reach new milestones, setting benchmarks 
                 in quality and innovation. His engineering background in Electrical Engineering has been a cornerstone of 
-                the company’s growth, bringing technical expertise to streamline processes, drive innovation, and ensure 
+                the company's growth, bringing technical expertise to streamline processes, drive innovation, and ensure 
                 continuous improvement throughout the manufacturing operation.
                 </p>
               </div>
