@@ -1,28 +1,4 @@
 import React from 'react';
-import { Target, Users, Trophy, Lightbulb } from 'lucide-react';
-
-const clients = [
-  {
-    name: 'GOVERDHAN TRANSFORMER',
-    logo: 'https://placehold.co/300x300/4A90E2/white?text=GT',
-    description: 'Specialized in distribution transformers and voltage stabilizers',
-  },
-  {
-    name: 'SAMAR ELECTRICALS AND WIRE',
-    logo: 'https://placehold.co/300x300/2ECC71/white?text=SE',
-    description: 'Leading manufacturer of power and distribution transformers',
-  },
-  {
-    name: 'PARAMHANS ENTERPRISES',
-    logo: 'https://placehold.co/300x300/E74C3C/white?text=PE',
-    description: 'Expert in custom transformer solutions and electrical equipment',
-  },
-  {
-    name: 'ALFIA ELECTRICALS',
-    logo: 'https://placehold.co/300x300/9B59B6/white?text=AE',
-    description: 'Innovative transformer manufacturer with focus on energy efficiency',
-  },
-];
 
 export default function AboutUs() {
   return (
@@ -64,29 +40,6 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* Our Clients Section */}
-        {/* Removed the entire section */}
-        {/* <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Our Trusted Clients</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {clients.map((client, index) => (
-              <div
-                key={index}
-                className="text-center"
-              >
-                <div className="mb-4 mx-auto">
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="w-32 h-32 rounded-full object-cover mx-auto border-4 border-blue-500 shadow-lg"
-                  />
-                </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">{client.name}</h4>
-                <p className="text-gray-600">{client.description}</p>
-              </div>
-            ))}
-          </div>
-        </div> */}
       </div>
     </section>
   );

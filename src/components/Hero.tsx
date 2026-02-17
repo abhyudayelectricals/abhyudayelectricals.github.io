@@ -1,6 +1,5 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
 
 export default function Hero() {
   const handleScroll = (sectionId: string) => {
